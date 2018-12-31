@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Install [Docker and docker-compose](http://docs.docker.jp/engine/installation/) .
+2. Clone this repository.
+3. Create Database. `docker-compose web rails db:setup`
+4. Execute `docker-compose up`
+5. Access `http://localhost:3000/posts` , and try !!

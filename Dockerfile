@@ -6,10 +6,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install nodejs && \
     apt-get update && apt-get install -y yarn
-RUN mkdir /myapp
-WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+RUN mkdir /action_text_sample
+WORKDIR /action_text_sample
+COPY Gemfile /action_text_sample/Gemfile
+COPY Gemfile.lock /action_text_sample/Gemfile.lock
 RUN bundle install -j4
-COPY . /myapp
+COPY . /action_text_sample
 RUN yarn install --ignore-engines
